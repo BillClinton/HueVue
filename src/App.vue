@@ -9,9 +9,3 @@ import LightList from "@/components/LightList.vue";
     </v-main>
   </v-app>
 </template>
-
-<style>
-div {
-  background-color: #666666;
-}
-</style>
