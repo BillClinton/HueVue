@@ -1,10 +1,17 @@
+<script setup lang="ts">
+import LightList from "@/components/LightList.vue";
+</script>
+
 <template>
   <v-app>
     <v-main>
-      <h1>test</h1>
+      <lightList />
     </v-main>
   </v-app>
 </template>
 
-<script setup lang="ts">
-</script>
+<style>
+div {
+  background-color: #666666;
+}
+</style>
