@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { computed, ref } from "vue";
 import { useLightsStore } from "@/stores/lightsStore.js";
+import LightButton from "./LightButton.vue";
 
 const store = useLightsStore();
 store.load();
@@ -24,15 +25,15 @@ const rooms = computed(() => {
     <v-window v-model="tab">
       <v-window-item v-for="room in rooms" :key="room.id" :value="room.id">
         <v-container fluid>
-          <v-row justify="center">
+          <v-row justify="center" align="center">
             <v-col
-              class="d-flex justify-center align-center"
+              class="d-flex justify-center align-center mt-10"
               v-for="light in room.lights"
               :key="light.id"
               cols="12"
               md="4"
             >
-              <h1>{{ light.name }}</h1>
+              <light-button :light="light" />
             </v-col>
           </v-row>
         </v-container>
